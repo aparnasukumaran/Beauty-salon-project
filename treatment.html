@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Salon Project</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <link rel="stylesheet" href="./css/responsive.css">
+
+
+ <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+
+  <style>
+    .menu-icon {
+      font-size: 1.5rem;
+      color: black !important;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebox -->
+  <div class="sidebox">
+    <div class="sideboxicon">
+      <i class="bi bi-facebook"></i><br><br>
+      <i class="bi bi-instagram"></i><br><br>
+      <i class="bi bi-yelp"></i>
+
+    </div>
+  </div>
+  <!-- Navbar -->
+
+   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-light" id="mainNavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex gap-2 p-1 mx-1 ms-4 border border-2 border-black" href="#">
+                <h1 class="text-dark">BRW</h1>
+                <p class="text-dark">Bar <br> inc.</p>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <ion-icon id="menu-icon" name="menu" class="menu-icon"></ion-icon>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ms-auto d-flex gap-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link me-5">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link me-5">ABOUT</a></li>
+                    <li class="nav-item"><a href="treatment.html" class="nav-link me-5">TREATMENTS</a></li>
+                    <li class="nav-item"><a href="packages.html" class="nav-link me-5">PACKAGES</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link me-5">CONTACT</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link me-5">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+  <!-- Hero section -->
+  <div class="page-content">
+    <section>
+      <div class="bhcontainer">
+        <div class="bh1">
+          <h4>WHAT WE DO</h4>
+        </div>
+        <div class="bh2">
+          <span class="clickable-text" id="allBtn">All Services</span>
+          <span class="clickable-text" id="browBtn">Brow Treatment</span>
+          <span class="clickable-text" id="lashesBtn">Lashes Treatment</span>
+          <div class="line"></div>
+
+          <div class="treatment-grid-container">
+            <div class="treatment-container" id="t_container">
+              <div class="T1" data-category="brow">
+                <div class="card  bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Brow Tint</h5>
+                    <p class="card-text">1 hr</p>
+                    <p class="card-text">$45</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T2" data-category="brow">
+                <div class="card bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Brow Custom Shaping</h5>
+                    <p class="card-text">45 min</p>
+                    <p class="card-text">$30</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T3" data-category="brow">
+                <div class="card bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Brow Extension</h5>
+                    <p class="card-text">1 hr 30 min</p>
+                    <p class="card-text">$75</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T4" data-category="brow">
+                <div class="card bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Brow Microblading</h5>
+                    <p class="card-text">2 hr</p>
+                    <p class="card-text">$125</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T5" data-category="brow">
+                <div class="card bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Brow Thrread</h5>
+                    <p class="card-text">35 min</p>
+                    <p class="card-text">$30</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T6" data-category="brow">
+                <div class="card bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Brow Waxing</h5>
+                    <p class="card-text">2 hr</p>
+                    <p class="card-text">$110</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T7" data-category="lashes">
+                <div class="card bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Lash Lift</h5>
+                    <p class="card-text">1 hr</p>
+                    <p class="card-text">$40</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T8" data-category="lashes">
+                <div class="card  bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Lash Extensions</h5>
+                    <p class="card-text">1 hr 20 min</p>
+                    <p class="card-text">$60</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="T9" data-category="lashes">
+                <div class="card bg-transparent" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Lash Lifting</h5>
+                    <p class="card-text">2 hr</p>
+                    <p class="card-text">$50</p>
+                    <a href="#contact" class="btn btn-dark rounded-0" id="T_button">Make an Appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  </div>
+
+
+
+  <script>
+   // NAV
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarCollapse = document.getElementById("collapsibleNavbar");
+            const menuIcon = document.getElementById("menu-icon");
+
+            navbarCollapse.addEventListener("show.bs.collapse", function () {
+                menuIcon.classList.remove("bi-list");
+                menuIcon.classList.add("bi-x");
+            });
+
+            navbarCollapse.addEventListener("hide.bs.collapse", function () {
+                menuIcon.classList.remove("bi-x");
+                menuIcon.classList.add("bi-list");
+            });
+        });
+
+    // TREATMENT
+    document.addEventListener('DOMContentLoaded', () => {
+      const texts = document.querySelectorAll('.clickable-text');
+      texts.forEach(text => {
+        text.addEventListener('click', () => {
+          texts.forEach(t => t.classList.remove('underline'));
+          text.classList.add('underline');
+        });
+      });
+    });
+
+    // ___________________________________________________________________________________________
+
+    //FILTERING
+    document.addEventListener('DOMContentLoaded', function () {
+      const allBtn = document.getElementById('allBtn');
+      const browBtn = document.getElementById('browBtn');
+      const lashesBtn = document.getElementById('lashesBtn');
+      const treatments = document.querySelectorAll('.treatment-container > div');
+
+      function filterCards(category) {
+        treatments.forEach(card => {
+          const cardCategory = card.dataset.category;
+
+        
+          if (category === 'all' || cardCategory === category) {
+            card.style.display = 'block';
+            void card.offsetWidth;
+            card.classList.remove('fade-out');
+          } else {
+            card.classList.add('fade-out');
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      }
+
+      allBtn.addEventListener('click', () => filterCards('all'));
+      browBtn.addEventListener('click', () => filterCards('brow'));
+      lashesBtn.addEventListener('click', () => filterCards('lashes'));
+    });
+
+
+  </script>
+
+  <script src="./js/script.js" defer></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

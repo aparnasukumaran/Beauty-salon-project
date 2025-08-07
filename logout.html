@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Salon Dashboard</title>
+
+  <!-- Google Font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(217, 234, 217);
+      color: #333;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .dashboard-card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dashboard-card h2 {
+      color: rgb(65, 94, 65);
+      margin-bottom: 20px;
+      margin-left: 25px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .dashboard-card p {
+      font-size: 1em;
+      margin-bottom: 30px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .dashboard-card button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin: 5px;
+    }
+
+    #logoutBtn {
+      background-color: rgb(93, 138, 93);
+      color: white;
+    }
+
+    #logoutBtn:hover {
+      background-color: rgb(64, 136, 64);
+    }
+
+    #darkModeToggle {
+      background-color: #e0e0e0;
+    }
+
+    #darkModeToggle:hover {
+      background-color: #ccc;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark-mode .dashboard-card {
+      background-color: #ffffff;
+      color: #0a0909;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    body.dark-mode #darkModeToggle {
+      background-color: #2c2c2c;
+      color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard-card">
+    <h2>Welcome 🎉</h2>
+    <p>You are now logged in. Explore your personalized dashboard below.</p>
+
+    <button id="logoutBtn">Logout <ion-icon name="log-out-outline"></ion-icon></button>
+    <button id="darkModeToggle">🌙</button>
+  </div>
+
+
+  <script>
+    // Dark mode 
+    const toggleBtn = document.getElementById("darkModeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    // Logout
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      alert("You have been logged out!");
+      window.location.href = "login.html";
+    });
+
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
+      }
+    });
+  </script>
+
+<!--  Ionicons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

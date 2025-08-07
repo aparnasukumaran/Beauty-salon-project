@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Salon Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: rgb(174, 201, 174);
+      color: #333;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .dashboard-wrapper {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(93, 138, 93);
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      color: rgb(93, 138, 93);
+      margin-bottom: 12px;
+      font-size: 1.3em;
+    }
+
+    .appointment-card {
+      background: rgb(160, 184, 160);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .appointment-card p {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding-left: 10px;
+    }
+
+    .profile-form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .profile-form input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .profile-form button {
+      margin-top: 15px;
+      background-color: rgb(123, 153, 123);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .profile-form button:hover {
+      background-color: rgb(86, 116, 86);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .top-bar button {
+      background-color: #eee;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark-mode .dashboard-wrapper {
+      background-color: #1e1e1e;
+      color: #eee;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    body.dark-mode .appointment-card {
+      background-color: #2c2c2c;
+    }
+
+    body.dark-mode input {
+      background-color: #2a2a2a;
+      color: #fff;
+      border: 1px solid #555;
+    }
+
+    body.dark-mode .top-bar button {
+      background-color: #2c2c2c;
+      color: #eee;
+    }
+
+    #logoutBtn {
+      background-color: rgb(93, 138, 93);
+      color: white;
+    }
+
+    #logoutBtn:hover {
+      background-color: rgb(64, 136, 64);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard-wrapper">
+    <div class="top-bar">
+      <button id="logoutBtn">Logout <ion-icon name="log-out-outline"></ion-icon></button>
+      <button id="darkModeToggle">🌙</button>
+    </div>
+
+    <h2>Welcome 💖</h2>
+
+
+
+    <!-- Profile Section -->
+    <div class="section profile-form">
+      <h3>My Profile</h3>
+      <label for="name">Name</label>
+      <input type="text" id="name" value="Your Name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" value="you@example.com" />
+
+      <button id="updateBtn">Update</button>
+    </div>
+
+    <!-- Appointments Section -->
+    <div class="section">
+      <h3>My Appointments</h3>
+      <div class="appointment-card">
+        <p><strong>Service :</strong> Brow Tint</p>
+        <p><strong>Date :</strong> July 15, 2025</p>
+        <p><strong>Time :</strong> 9:00 AM</p>
+      </div>
+      <div class="appointment-card">
+        <p><strong>Service :</strong> Lash Lifting</p>
+        <p><strong>Date :</strong> July 20, 2025</p>
+        <p><strong>Time :</strong> 11:30 AM</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Dark mode
+    const toggleBtn = document.getElementById("darkModeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    // Logout
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      alert("You have been logged out!");
+      window.location.href = "login.html";
+    });
+
+    // profile update button
+    document.getElementById("updateBtn").addEventListener("click", () => {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (name && email) {
+        alert("✅ Profile updated");
+      } else {
+        alert("⚠️ Please fill in all fields.");
+      }
+    });
+  </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
